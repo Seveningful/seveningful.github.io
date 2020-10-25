@@ -1,6 +1,7 @@
 body,
 html {
     height: 100%;
+    background:
 }
 
 #main {
@@ -8,16 +9,18 @@ html {
     width: 100%;
     position: relative;
     overflow: hidden;
-    
+
 }
 
 #colored_pane {
-    background: black;
-    opacity: 0.65;
+    background: rgba(0, 0, 0, 0.65);
     position: absolute;
     height: 100%;
     width: 100%;
     z-index: 1;
+        -webkit-box-shadow: inset 0px -10px 1px 0px rgba(13, 178, 246, 1);
+    -moz-box-shadow: inset 0px -10px 1px 0px rgba(13, 178, 246, 1);
+    box-shadow: inset 0px -10px 1px 0px rgba(13, 178, 246, 1);
 }
 
 #main_video {
@@ -47,5 +50,5 @@ html {
     overflow: hidden;
     left: 50%;
     transform: translate(-50%, -0%);
-}
 
+}
