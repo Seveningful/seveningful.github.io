@@ -355,13 +355,11 @@ pmh.onclick = function () {
 
  logo.addEventListener("load",function() {
      animateLogo();
-      alert("SVG contentDocument Loaded!");
  }, false);
 
 
 function animateLogo() {
     var node = logo.getBoundingClientRect();
-
     var svgDoc = logo.contentDocument;
 
 
