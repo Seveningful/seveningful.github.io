@@ -112,10 +112,6 @@ var tools = {
 
 /* Shattered Head */
 
- logo.addEventListener("load",function() {
-     animateLogo();
- }, false);
-
 
 function animateLogo() {
     var node = logo.getBoundingClientRect();
@@ -151,7 +147,9 @@ function animateLogo() {
             });
             delay += 0.08;
         }
+        
     }
+    setTimeout(function() {setupPage()}, 2000)
 
 }
 
@@ -159,4 +157,18 @@ function setWhite(child) {
     TweenMax.to(child, 0.2, {
         fill: "white"
     });
+}
+
+
+window.onload = function() {
+    
+    animateLogo();
+}
+
+function setupPage() {
+    gsap.to("#main", {duration: 1, ease: "power2.inOut", "height" :"80%"});
+    gsap.to("#colored_pane", {duration: 1, ease: "power2.inOut", "background" :"rgba(0, 0, 0, 0.65)", "box-shadow" : "inset 0px -10px 1px 0px rgba(13, 178, 246, 1)"});
+    gsap.to("#main-border", {
+        "border-radius" : "100%/0 0 200px 200px",duration: 1, ease: "power2.out"
+    })
 }
