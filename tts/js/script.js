@@ -140,7 +140,7 @@ function animateLogo() {
             child.setAttribute("stroke-dashoffset", "" + length)
             child.setAttribute("stroke-dasharray", "" + length + " " + length)
 
-            TweenMax.to(child, 1.7, {
+            TweenMax.to(child, 1, {
                 delay: 1 * delay,
                 attr: {
                     "stroke-dashoffset": "0"
@@ -149,7 +149,7 @@ function animateLogo() {
                 onCompleteParams: [child],
                 ease: Power2.easeInOut
             });
-            delay += 0.1;
+            delay += 0.04;
         }
     }
 
