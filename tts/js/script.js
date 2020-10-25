@@ -147,7 +147,7 @@ function animateLogo() {
                 },
                 onComplete: setWhite,
                 onCompleteParams: [child],
-                ease: Power2.easeOut
+                ease: Power2.easeIn
             });
             delay += 0.08;
         }
