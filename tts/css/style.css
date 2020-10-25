@@ -6,7 +6,6 @@ html {
 #main {
     height: 80%;
     width: 100%;
-    background: black;
     position: relative;
     overflow: hidden;
 }
