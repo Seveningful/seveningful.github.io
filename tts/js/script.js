@@ -147,7 +147,7 @@ function animateLogo() {
                 },
                 onComplete: setWhite,
                 onCompleteParams: [child],
-                ease: Power2.easeInOut
+                ease: Power2.easeOut
             });
             delay += 0.04;
         }
@@ -156,7 +156,7 @@ function animateLogo() {
 }
 
 function setWhite(child) {
-    TweenMax.to(child, 0.3, {
+    TweenMax.to(child, 0.2, {
         fill: "white"
     });
 }
