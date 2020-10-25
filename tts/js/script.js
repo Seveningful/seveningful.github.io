@@ -156,7 +156,7 @@ function animateLogo() {
 }
 
 function setWhite(child) {
-    TweenMax.to(child, 1, {
+    TweenMax.to(child, 0.3, {
         fill: "white"
     });
 }
