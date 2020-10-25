@@ -352,8 +352,12 @@ pmh.onclick = function () {
 
 
 /* Shattered Head */
- 
-animateLogo();
+
+ logo.addEventListener("load",function() {
+     animateLogo();
+      alert("SVG contentDocument Loaded!");
+ }, false);
+
 
 function animateLogo() {
     var node = logo.getBoundingClientRect();
@@ -403,6 +407,7 @@ function setWhite(child) {
 function shatterHead(intensity) {
     var node = shatter.getBoundingClientRect();
     var svgDoc = shatter.contentDocument;
+    if(!svgDoc) return;
     var y1 =  ((node.bottom - node.top) / 2) , //((node.bottom - node.top) / 2),
         x1 = ((node.right - node.left) / 2) ; //((node.right - node.left) / 2); // node.right - node.left;
 
