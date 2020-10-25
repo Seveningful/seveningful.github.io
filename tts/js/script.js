@@ -149,7 +149,7 @@ function animateLogo() {
                 onCompleteParams: [child],
                 ease: Power2.easeOut
             });
-            delay += 0.04;
+            delay += 0.08;
         }
     }
 
