@@ -3,6 +3,45 @@ html {
     height: 100%;
     background: #f0f0f0;
     overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    color: #F0F0F0;
+    z-index: 10;
+    top: -100px;
+
+}
+
+#navbar-container {
+    flex-flow: row;
+    color: #F1F1F1;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    padding: 45px 15%;
+    position: relative;
+
+    width: 70%;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+
+    align-items: center;
+}
+
+#navbar-container > div {
+    flex: auto;
+    flex-basis: 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+
 }
 
 #main {
@@ -96,8 +135,9 @@ html {
 
 .footer-cell {
     flex: auto;
-    display: table-cell;
     flex-basis: 0;
+
+    font-family: 'Roboto', sans-serif;
 
 }
 
@@ -116,6 +156,7 @@ html {
 .footer-cell > h3 {
     position: absolute;
     top: 30px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .icons {

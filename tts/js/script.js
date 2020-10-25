@@ -149,7 +149,7 @@ function animateLogo() {
         }
         
     }
-    setTimeout(function() {setupPage()}, 2000)
+   
 
 }
 
@@ -161,12 +161,14 @@ function setWhite(child) {
 
 
 window.onload = function() {
-    
+     setTimeout(function() {setupPage()}, 2000);
     animateLogo();
+    
 }
 
 function setupPage() {
     gsap.to("#main", {duration: 1, ease: "power2.inOut", "height" :"80%"});
+    gsap.to("#navbar", {duration: 1, ease: "power2.inOut", "top" :"0px"});
     gsap.to("#colored_pane", {duration: 1, ease: "power2.inOut", "background" :"rgba(0, 0, 0, 0.65)", "box-shadow" : "inset 0px -10px 1px 0px rgba(13, 178, 246, 1)"});
     gsap.to("#main-border", {
         "border-radius" : "100%/0 0 200px 200px",duration: 1, ease: "power2.out"
