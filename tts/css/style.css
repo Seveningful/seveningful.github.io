@@ -39,7 +39,7 @@ html {
     transform: translate(-50%, -50%);
 }
 
-#main-border-container {
+#main-border {
     border-radius: 100%/0 0 200px 200px;
     position: absolute;
     width: 150%;
