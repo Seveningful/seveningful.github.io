@@ -136,8 +136,8 @@ function animateLogo() {
             child.setAttribute("stroke-dashoffset", "" + length)
             child.setAttribute("stroke-dasharray", "" + length + " " + length)
 
-            TweenMax.to(child, 1, {
-                delay: 1 * delay,
+            TweenMax.to(child, 0.5, {
+                delay: 0.5 * delay,
                 attr: {
                     "stroke-dashoffset": "0"
                 },
@@ -145,11 +145,11 @@ function animateLogo() {
                 onCompleteParams: [child],
                 ease: Power2.easeIn
             });
-            delay += 0.08;
+            delay += 0.04;
         }
-        
+
     }
-   
+
 
 }
 
@@ -160,17 +160,38 @@ function setWhite(child) {
 }
 
 
-window.onload = function() {
-     setTimeout(function() {setupPage()}, 2000);
-    animateLogo();
+window.onload = function () {
+
     
+    setTimeout(function () {
+        setupPage()
+    }, 500);
+    //Reset Scroll
+    document.body.scrollTop = 0;
+    animateLogo();
+
 }
 
 function setupPage() {
-    gsap.to("#main", {duration: 1, ease: "power2.inOut", "height" :"80%"});
-    gsap.to("#navbar", {duration: 1, ease: "power2.inOut", "top" :"0px"});
-    gsap.to("#colored_pane", {duration: 1, ease: "power2.inOut", "opacity" :.65, "box-shadow" : "inset 0px -10px 1px 0px rgba(13, 178, 246, 1)"});
+    gsap.to("#main", {
+        duration: 1,
+        ease: "power2.inOut",
+        "height": "80%"
+    });
+    gsap.to("#navbar", {
+        duration: 1,
+        ease: "power2.inOut",
+        "top": "0px"
+    });
+    gsap.to("#colored_pane", {
+        duration: 1,
+        ease: "power2.inOut",
+        "opacity": .65,
+        "box-shadow": "inset 0px -10px 1px 0px rgba(13, 178, 246, 1)"
+    });
     gsap.to("#main-border", {
-        "border-radius" : "100%/0 0 200px 200px",duration: 1, ease: "power2.out"
+        "border-radius": "100%/0 0 200px 200px",
+        duration: 1,
+        ease: "power2.out"
     })
 }
