@@ -246,8 +246,8 @@ html {
     margin-bottom: 25px;
     max-width: 110px;
 }
-.pricing-img svg {
-    fill: rgba(13, 178, 246, 1);
+.pricing-img svg  {
+    fill: rgba(13, 178, 246, 1) !important;
 }
 
 .pricing-header {

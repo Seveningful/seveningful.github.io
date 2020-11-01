@@ -168,6 +168,12 @@ window.onload = function () {
     }, 500);
     //Reset Scroll
     document.body.scrollTop = 0;
+    
+    // Set Pricning colors
+    var pathStudent = document.getElementById("student-svg").getElementsByTagName('path')[0];
+    setPricingColoring(pathStudent, "rgb(0,63,107)", 0);
+    
+    
     animateLogo();
 
 }
@@ -217,3 +223,13 @@ document.body.addEventListener('scroll', function(e) {
 
   ticking = true;
 }, false);
+
+
+
+/** Set color of pricning imgs **/
+function setPricingColoring(element, color, time) {
+    TweenMax.to(element, time, {
+        fill: color
+    });
+}
+
