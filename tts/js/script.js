@@ -110,7 +110,9 @@ var tools = {
 /* TOOLS END*/
 
 
-/* Shattered Head */
+/* Reset and cancel scroll*/
+document.body.scrollTop = 0;
+allowScroll(false);
 
 
 function animateLogo() {
@@ -164,15 +166,18 @@ window.onload = function () {
 
     
     setTimeout(function () {
-        setupPage()
+        setupPage();
+         allowScroll(true);
     }, 500);
     //Reset Scroll
     document.body.scrollTop = 0;
     
-    // Set Pricning colors
+    // Set Pricning colors DOESN'T WORK ???
     var pathStudent = document.getElementById("student-svg").getElementsByTagName('path')[0];
+    document.getElementById("student-svg").style.fill='yellow';
     setPricingColoring(pathStudent, "rgb(0,63,107)", 0);
     
+   
     
     animateLogo();
 
@@ -201,6 +206,7 @@ function setupPage() {
         ease: "power2.out"
     })
 }
+
 var scroll = 0;
 var ticking = false;
 
@@ -240,3 +246,14 @@ function setPricingColoring(element, color, time) {
     });
 }
 
+
+function allowScroll(bool) {
+    if(bool)
+      {
+          document.body.style.overflowx="hidden";
+          document.body.style.overflowy="scroll";
+          document.body.style.overflow="";
+      }  else {
+          document.body.style.overflow="hidden";
+      }
+}
