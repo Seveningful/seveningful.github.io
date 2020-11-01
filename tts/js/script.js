@@ -164,21 +164,21 @@ function setWhite(child) {
 
 window.onload = function () {
 
-    
+
     setTimeout(function () {
         setupPage();
-         allowScroll(true);
+        allowScroll(true);
     }, 500);
     //Reset Scroll
     document.body.scrollTop = 0;
-    
+
     // Set Pricning colors DOESN'T WORK ???
     var pathStudent = document.getElementById("student-svg").getElementsByTagName('path')[0];
-    document.getElementById("student-svg").style.fill='yellow';
+    document.getElementById("student-svg").style.fill = 'yellow';
     setPricingColoring(pathStudent, "rgb(0,63,107)", 0);
-    
-   
-    
+
+
+
     animateLogo();
 
 }
@@ -212,29 +212,32 @@ var ticking = false;
 
 //Fires when scrollEvent is fired
 function onScroll(scrollY) {
-    
+
     //princig
-    if(scrollY >= document.getElementById("main").getBoundingClientRect().height/4) {
+    if (scrollY >= document.getElementById("main").getBoundingClientRect().height / 4) {
         document.getElementById("pricing").className = "container";
     }
-    
+    if (scrollY >= document.getElementById("main").getBoundingClientRect().height / 6) {
+        document.getElementById("offers").getElementsByTagName("h3")[0].classList.remove("hidden-title");
+    }
+
     //navbar
-     if(scrollY >= document.getElementById("main").getBoundingClientRect().height/10 && !document.getElementById("navbar-container").className != "scroll") {
+    if (scrollY >= document.getElementById("main").getBoundingClientRect().height / 6 && !document.getElementById("navbar-container").className != "scroll") {
         document.getElementById("navbar-container").className = "scroll";
     } else document.getElementById("navbar-container").className = "";
 }
 
 //SHow elements on scroll
-document.body.addEventListener('scroll', function(e) {
-  scroll = document.body.scrollTop;
-  if (!ticking) {
-    window.requestAnimationFrame(function() {
-      onScroll(scroll);
-      ticking = false;
-    });
-  }
+document.body.addEventListener('scroll', function (e) {
+    scroll = document.body.scrollTop;
+    if (!ticking) {
+        window.requestAnimationFrame(function () {
+            onScroll(scroll);
+            ticking = false;
+        });
+    }
 
-  ticking = true;
+    ticking = true;
 }, false);
 
 
@@ -248,12 +251,11 @@ function setPricingColoring(element, color, time) {
 
 
 function allowScroll(bool) {
-    if(bool)
-      {
-          document.body.style.overflowx="hidden";
-          document.body.style.overflowy="scroll";
-          document.body.style.overflow="";
-      }  else {
-          document.body.style.overflow="hidden";
-      }
+    if (bool) {
+        document.body.style.overflowx = "hidden";
+        document.body.style.overflowy = "scroll";
+        document.body.style.overflow = "";
+    } else {
+        document.body.style.overflow = "hidden";
+    }
 }

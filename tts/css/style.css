@@ -34,15 +34,15 @@ html {
     -webkit-box-align: center;
 
     align-items: center;
-    background: rgba(17,17,17, 0);
+    background: rgba(17, 17, 17, 0);
     transition: background 0.4s ease-in-out, padding 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 
 #navbar-container.scroll {
-    background: rgba(17,17,17, 1);
+    background: rgba(17, 17, 17, 1);
     padding: 27.5px 20%;
     width: 60%;
-     transition: background 0.1s ease-in-out !important, padding 0.4s ease-in-out, width 0.4s ease-in-out !important;
+    transition: background 0.1s ease-in-out !important, padding 0.4s ease-in-out, width 0.4s ease-in-out !important;
 }
 
 #navbar-container > div {
@@ -111,12 +111,21 @@ html {
     padding: 30px 12.5%;
 
 }
+
 .page-title {
     display: block;
-text-align: center;
-font-size: 32px;
-
+    text-align: center;
+    font-size: 32px;
+    opacity: 1;
+    margin-top: 15px;
+    transition: opacity 0.5s ease-out, margin 0.7s ease-out;
 }
+
+.hidden-title {
+    opacity: 0 !important;
+    margin-top: 45px !important;
+}
+
 
 #footer {
     background: #111;
@@ -205,7 +214,7 @@ font-size: 32px;
 }
 
 .container.hidden-panel {
-        opacity: 0;
+    opacity: 0;
     margin-top: 50px;
     transition: opacity 0.5s ease-in-out, margin 0.5s ease-in-out;
 }
@@ -263,7 +272,8 @@ font-size: 32px;
     margin-bottom: 25px;
     max-width: 110px;
 }
-.pricing-img svg  {
+
+.pricing-img svg {
     fill: rgba(13, 178, 246, 1) !important;
 }
 
@@ -288,9 +298,7 @@ font-size: 32px;
     padding: 15px 0;
 }
 
-.pricing-features-item:last-child {
-
-}
+.pricing-features-item:last-child {}
 
 .pricing-price {
     color: #016FF9;
