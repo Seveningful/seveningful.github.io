@@ -195,3 +195,25 @@ function setupPage() {
         ease: "power2.out"
     })
 }
+var scroll = 0;
+var ticking = false;
+
+//Fires when scrollEvent is fired
+function onScroll(scrollY) {
+    if(scrollY >= document.getElementById("main").getBoundingClientRect().height/4) {
+        document.getElementById("pricing").className = "container";
+    }
+}
+
+//SHow elements on scroll
+document.body.addEventListener('scroll', function(e) {
+  scroll = document.body.scrollTop;
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+      onScroll(scroll);
+      ticking = false;
+    });
+  }
+
+  ticking = true;
+}, false);
