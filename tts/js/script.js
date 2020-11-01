@@ -136,8 +136,8 @@ function animateLogo() {
             child.setAttribute("stroke-dashoffset", "" + length)
             child.setAttribute("stroke-dasharray", "" + length + " " + length)
 
-            TweenMax.to(child, 0.5, {
-                delay: 0.5 * delay,
+            TweenMax.to(child, 1, {
+                delay: 0.8 * delay,
                 attr: {
                     "stroke-dashoffset": "0"
                 },
@@ -206,9 +206,16 @@ var ticking = false;
 
 //Fires when scrollEvent is fired
 function onScroll(scrollY) {
+    
+    //princig
     if(scrollY >= document.getElementById("main").getBoundingClientRect().height/4) {
         document.getElementById("pricing").className = "container";
     }
+    
+    //navbar
+     if(scrollY >= document.getElementById("main").getBoundingClientRect().height/10 && !document.getElementById("navbar-container").className != "scroll") {
+        document.getElementById("navbar-container").className = "scroll";
+    } else document.getElementById("navbar-container").className = "";
 }
 
 //SHow elements on scroll
